@@ -2,9 +2,10 @@
   gather_facts: false
   vars:
     ansible_source_directory: ./ansible-2.8.1
-    collection_destination: ~/github/collection_test
+    destination_directory: ~/github/collection_test
     collection_organization: cidrblock
     collection_name: utils
     source_sub_directory: /network/nxos
   roles:
   - scaffold_directories
+  - migrate_content

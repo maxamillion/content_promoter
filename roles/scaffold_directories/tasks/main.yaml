@@ -4,12 +4,12 @@
     that: "{{ item }} is defined"
   loop:
   - ansible_source_directory
-  - collection_destination
+  - destination_directory
   - collection_name
   - collection_organization
 
 - name: "Create the collection directory structure"
   file:
-    path: "{{ collection_destination }}/{{ item }}"
+    path: "{{ item }}"
     state: directory
   with_items: "{{ directories['collection'] }}"
